@@ -12,7 +12,7 @@ def secondWork():
     yield
     print("tear down validation")
 
-@pytest.mark.smoke
+@pytest.mark
 def test_initialCheck(preWork, secondWork):
     print("this is first test")
     assert preWork == "pass"
