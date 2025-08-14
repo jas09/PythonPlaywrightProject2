@@ -1,6 +1,6 @@
 import pytest
 
-@pytest.mark.smoke
+@pytest.mark
 def test_thirdCheck(preSetUpWork):
     print("this is third test")
 
