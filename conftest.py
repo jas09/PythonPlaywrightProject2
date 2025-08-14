@@ -18,7 +18,7 @@ def browserInstance(playwright,request):
         browser = playwright.chromium.launch(headless=True)
     elif browser_name == "firefox":
         browser = playwright.firefox.launch(headless=True)
-    context = browser.new_context()
+    context = browser.new_context(record_video_dir = "Videos/")
     page = context.new_page()
     yield page
     context.close()
