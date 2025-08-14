@@ -17,6 +17,6 @@ def test_initialCheck(preWork, secondWork):
     print("this is first test")
     assert preWork == "pass"
 
-@pytest.mark
+@pytest.mark.smoke
 def test_secondCheck(preSetUpWork, secondWork):
     print("this is second test")
