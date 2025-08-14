@@ -18,7 +18,7 @@ def test_session_storage(playwright: Playwright):
     #context.add_init_script(f""""localStorage.setItem('token','{getToken}')""")
     page = context.new_page()
     #Script to inject token in session local storage
-    page.add_init_script(f""""localStorage.setItem('token','{getToken}')""")
+    #page.add_init_script(f""""localStorage.setItem('token','{getToken}')""")
     page.goto("https://rahulshettyacademy.com/client")
     page.get_by_role("button", name="ORDERS").click()
     expect(page.get_by_text('Your Orders')).to_be_visible()
