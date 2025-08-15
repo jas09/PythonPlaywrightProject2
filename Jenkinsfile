@@ -13,7 +13,7 @@ pipeline {
 
         stage('Build & Test') {
             steps {
-                bat 'pytest tests/'  // or your Playwright/Robot Framework command
+                bat 'pytest'  // or your Playwright/Robot Framework command
             }
         }
 
