@@ -10,6 +10,12 @@ pipeline {
 					url: 'https://github.com/jas09/PythonPlaywrightProject2.git'
             }
         }
+		stage('Setup'){
+			steps {
+				// Install pytest + Allure adapter
+				bat 'pip install pytest allure-pytest'
+			}
+		}
 
         stage('Build & Test') {
             steps {
