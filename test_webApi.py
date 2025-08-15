@@ -12,7 +12,7 @@ with open('data/credentials.json') as f:
 
 @pytest.mark.parametrize('user_credentials',user_credentials_list)
 def test_e2e_web_api(playwright : Playwright, user_credentials):
-    chromeBrowser = playwright.chromium.launch(headless=False)
+    chromeBrowser = playwright.chromium.launch(headless=True)
     context = chromeBrowser.new_context()
     page = context.new_page()
 
