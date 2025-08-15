@@ -4,7 +4,10 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git credentialsId: 'github-creds', url: 'https://github.com/jas09/PythonPlaywrightProject2.git'
+				// specify branch and set correct credential id// specify branch and set correct credential id
+				git branch: 'main',
+					credentialsId: 'bed7e560-3801-49d8-836a-9f230934a63a',
+					url: 'https://github.com/jas09/PythonPlaywrightProject2.git'
             }
         }
 
