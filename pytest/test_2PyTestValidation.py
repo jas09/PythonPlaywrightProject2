@@ -2,6 +2,6 @@ import pytest
 
 @pytest.mark.smoke
 def test_thirdCheck(preSetUpWork):
-    print("this is third test")
+    print("this is third test & testing GitHub-CI-Playwright")
 
 
