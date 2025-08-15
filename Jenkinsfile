@@ -26,6 +26,7 @@ pipeline {
 
         stage('Report') {
             steps {
+				//Allure Report
                 allure([
 				results: [[path: 'allure-results']],
 				reportBuildPolicy: 'ALWAYS'
