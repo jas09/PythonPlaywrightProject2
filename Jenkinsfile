@@ -40,7 +40,7 @@ pipeline {
                 // Optional explicit generation - plugin can also generate automatically
                 // If Allure CLI tool is installed as a tool in Jenkins, plugin might call it; otherwise specify full path.
                 // This will fail if allure-results is missing, but we already debugged above.
-                bat '%JENKINS_HOME%\\.jenkins\\tools\\ru.yandex.qatools.allure.jenkins.tools.AllureCommandlineInstallation\\Allure-2.34.1\\bin\\allure.bat generate allure-results -o allure-report --clean || echo "allure generate failed or no results"'
+                bat '%JENKINS_HOME%\\tools\\ru.yandex.qatools.allure.jenkins.tools.AllureCommandlineInstallation\\Allure-2.34.1\\bin\\allure.bat generate allure-results -o allure-report --clean || echo "allure generate failed or no results"'
             }
         }
 
