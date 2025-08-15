@@ -19,4 +19,4 @@ def test_initialCheck(preWork, secondWork):
 
 @pytest.mark.smoke
 def test_secondCheck(preSetUpWork, secondWork):
-    print("this is second test")
+    print("this is second test - attempt6")
