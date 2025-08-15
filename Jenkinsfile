@@ -22,7 +22,7 @@ pipeline {
         stage('Build & Test') {
             steps {
                 // Write Allure *results* to allure-results (not allure-report)
-                bat 'python -m pytest tests/ --alluredir=allure-results'
+                bat 'python -m pytest --alluredir=allure-results'
             }
         }
 
