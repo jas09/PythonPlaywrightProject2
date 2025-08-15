@@ -13,16 +13,17 @@ pipeline {
 
         stage('Build & Test') {
             steps {
-                bat 'pytest'  // or your Playwright/Robot Framework command
+				// Run your tests and generate an HTML report under allure-report/
+                bat 'pytest --alluredir=allure-report'
             }
         }
 
         stage('Report') {
             steps {
                 publishHTML(target: [
-                    reportDir: 'reports',
+                    reportDir: 'allure-report',
                     reportFiles: 'index.html',
-                    reportName: 'Test Report'
+                    reportName: 'Allure Report'
                 ])
             }
         }
