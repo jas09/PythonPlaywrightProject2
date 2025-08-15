@@ -15,7 +15,7 @@ def test_playwrightShortCut(page:Page):
 
 def test_fireFoxBrowser(playwright: Playwright):
     firefoxBrowser = playwright.firefox
-    firefox = firefoxBrowser.launch(headless=False)
+    firefox = firefoxBrowser.launch(headless=True)
     page = firefox.new_page()
     page.goto("https://www.saucedemo.com/")
     page.get_by_placeholder("Username").fill("standard_user")
