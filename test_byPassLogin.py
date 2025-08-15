@@ -6,7 +6,7 @@ from Utils.apiBase import APIUtils
 def test_session_storage(playwright: Playwright):
     api_utils = APIUtils()
     getToken = api_utils.getToken(playwright)
-    chromeBrowser = playwright.chromium.launch(headless=False)
+    chromeBrowser = playwright.chromium.launch(headless=True)
     context = chromeBrowser.new_context()
     context.add_init_script(f"""
             // Store token in localStorage
