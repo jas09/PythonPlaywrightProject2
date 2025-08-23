@@ -37,5 +37,7 @@ class APIUtils:
                                           "content-type": "application/json"})
         print(response.json())
         response_body = response.json()
+        if "orders" not in response_body:
+            raise ValueError(f"Order creation failed: {response_body.get('message', 'Unknown error')}")
         ordersList = response_body["orders"]
         return ordersList
