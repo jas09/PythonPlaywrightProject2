@@ -16,7 +16,7 @@ class APIUtils:
         responseBody = response.json()
         return responseBody["token"]
 
-    def maintain_screenshot_limit(self,folder_path, limit=40):
+    def maintain_screenshot_limit(self,folder_path, limit=60):
         # Get all .png files sorted by creation time (oldest first)
         screenshots = sorted(
             [f for f in os.listdir(folder_path) if f.endswith('.png')],
